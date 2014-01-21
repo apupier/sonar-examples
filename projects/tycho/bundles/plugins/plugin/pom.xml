@@ -4,13 +4,13 @@
 
   <parent>
     <groupId>org.example.tycho-example</groupId>
-    <artifactId>parent</artifactId>
+    <artifactId>plugins</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>plugin</artifactId>
   <packaging>eclipse-plugin</packaging>
 
-  <name>JaCoCo Examples :: tycho-example :: plugin</name>
+  <name>JaCoCo Examples :: tycho-example :: bundles :: plugins :: plugin</name>
 
 </project>
