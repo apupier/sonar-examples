@@ -19,18 +19,6 @@
     <module>plugin</module>
   </modules>
 
-  <properties><!-- 
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-
-    <sonar.language>java</sonar.language>
-    <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
-    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-    <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
-    <sonar.junit.reportsPath>../${project.artifactId}.tests/target/surefire-reports/</sonar.junit.reportsPath>
-    <sonar.skippedModules>plugin.tests</sonar.skippedModules> -->
-  </properties>
 <build>
 		<testSourceDirectory>src-test/java</testSourceDirectory>
 		<testResources>
@@ -80,24 +68,6 @@
         <version>0.19.0</version>
         <extensions>true</extensions>
       </plugin>
-      <!-- <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.6.4.201312101107</version>
-        <configuration>
-          <includes>
-	       <include>example.*</include>
-          </includes>
-          <destFile>${project.basedir}/target/jacoco.exec</destFile>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>prepare-agent</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin> -->
     </plugins>
   </build>
 </project>
