@@ -23,8 +23,9 @@
     <sonar.language>java</sonar.language>
     <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-    <sonar.jacoco.reportPath>${destFileJacocoExec}</sonar.jacoco.reportPath>
-    <sonar.junit.reportsPath>../../../tests/${project.artifactId}.tests/target/surefire-reports/</sonar.junit.reportsPath>
+    <!-- <sonar.jacoco.reportPath>${destFileJacocoExec}</sonar.jacoco.reportPath> -->
+    <sonar.junit.reportsPath>target/surefire-reports/</sonar.junit.reportsPath>
+	<sonar.jacoco.itReportPath>C:\Users\Aurélien\git\sonar-examples\projects\tycho\target\jacoco-it.exec</sonar.jacoco.itReportPath>
     <sonar.skippedModules>plugin.tests</sonar.skippedModules>
   </properties>
 
@@ -44,12 +45,20 @@
           <includes>
 	       <include>example.*</include>
           </includes>
-          <destFile>${destFileJacocoExec}</destFile>
+          <!-- <destFile>${destFileJacocoExec}</destFile> -->
         </configuration>
         <executions>
           <execution>
+            <id>pre-test</id>
             <goals>
               <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>post-test</id>
+            <phase>test</phase>
+            <goals>
+              <goal>report</goal>
             </goals>
           </execution>
         </executions>
@@ -59,7 +68,7 @@
 
   <repositories>
     <repository>
-      <id>eclipse-indigo</id>
+      <id>eclipse-kepler</id>
       <layout>p2</layout>
       <url>http://download.eclipse.org/releases/kepler</url>
     </repository>
