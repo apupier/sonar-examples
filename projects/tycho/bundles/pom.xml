@@ -16,9 +16,19 @@
   <name>JaCoCo Examples :: tycho-example :: bundles</name>
 
   <modules>
-    <module>plugins</module>
+    <module>plugin</module>
   </modules>
-
+	
+		<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	
+	
   <properties><!-- 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

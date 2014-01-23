@@ -6,4 +6,9 @@ public class Greeting
     {
        System.out.println("Hello, world.");
     }
+	
+	    public void coveredByUnitTest()
+    {
+       System.out.println("Hello, world.");
+    }
 }
